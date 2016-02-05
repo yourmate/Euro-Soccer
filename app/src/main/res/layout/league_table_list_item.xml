@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:minHeight="?attr/listPreferredItemHeight"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:paddingRight="5dp"
+          android:paddingLeft="5dp"
+          android:paddingBottom="5dp"
+          android:paddingTop="5dp">
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:layout_weight="1">
+                <ImageView android:id="@+id/team_icon"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="vertical">
+                    <TextView android:id="@+id/team_name"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:fontFamily="sans-seriff-condensed"
+                              android:textColor="@color/dark_black"
+                              android:textStyle="bold"
+                              android:textAppearance="?android:textAppearanceLarge"
+                              android:gravity="center"/>
+
+        </LinearLayout>
+         <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView android:id="@+id/team_position"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:fontFamily="sans-seriff-condensed"
+                  android:textStyle="bold"
+                  android:textColor="@color/dark_black"
+                  android:textAppearance="?android:textAppearanceMedium"
+                  android:gravity="center"/>
+             <TextView android:id="@+id/team_matches_played"
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:fontFamily="sans-seriff-condensed"
+                       android:textColor="@color/dark_black"
+                       android:textStyle="bold"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       android:gravity="center"/>
+             <TextView android:id="@+id/team_points"
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:fontFamily="sans-seriff-condensed"
+                       android:textColor="@color/dark_black"
+                       android:textStyle="bold"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

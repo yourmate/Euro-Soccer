@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_action</item>
+        <item name="colorPrimaryDark">@color/color_status</item>
+        <item name="colorAccent">@color/color_status</item>
+
+    </style>
+    <style name="SoccerStyle">
+    </style>
+    <style name="legueTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.EuroSoccer.NoTitle</item>
+    </style>
+    <style name="ActionBar.Solid.EuroSoccer.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_action</item>
+        
+    </style>
+    <style name="fixtureTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.fixture.NoTitle</item>
+    </style>
+    <style name="ActionBar.Solid.fixture.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_fix</item>
+
+    </style>
+    <style name="leagueTableTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.table.NoTitle</item>
+    </style>
+    <style name="ActionBar.Solid.table.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_legtable</item>
+
+    </style>
+    <style name="playerTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.player.NoTitle</item>
+    </style>
+    <style name="ActionBar.Solid.player.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_player</item>
+
+    </style>
+    <style name="teamTheme" parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.team.NoTitle</item>
+    </style>
+    <style name="ActionBar.Solid.team.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_team</item>
+
+    </style>
+</resources>

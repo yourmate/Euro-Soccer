@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hahaha.sandy.soccer"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:theme="@style/legueTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".FixtureActivity"
+                   android:parentActivityName=".MainActivity"
+                    android:theme="@style/fixtureTheme">
+
+        </activity>
+        <provider android:authorities="com.hahaha.sandy.soccer"
+                  android:name=".database.SoccerDataProvider"
+                    android:exported="false"
+                    android:syncable="true">
+
+        </provider>
+        <activity android:name=".LeagueTableActivity"
+                  android:parentActivityName=".FixtureActivity"
+                    android:theme="@style/leagueTableTheme">
+
+        </activity>
+        <activity android:name=".LeagueTableFullActivity"
+                  android:parentActivityName=".LeagueTableActivity"
+                    android:theme="@style/leagueTableTheme">
+
+        </activity>
+        <activity android:name=".TeamsActivity"
+                  android:parentActivityName=".FixtureActivity"
+                  android:theme="@style/teamTheme">
+
+        </activity>
+        <activity android:name=".PlayersActivity"
+                  android:parentActivityName=".TeamsActivity"
+                  android:theme="@style/playerTheme">
+
+        </activity>
+        <service android:name="services.FetchFixturesService">
+
+        </service>
+        <service android:name="services.FetchLeagueTableService">
+
+        </service>
+        <service android:name="services.FetchPlayerService">
+
+        </service>
+        <service android:name="services.FetchTeamsService">
+
+        </service>
+
+    </application>
+
+
+
+</manifest>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:minHeight="?attr/listPreferredItemHeight"
+              android:padding="5dp">
+    <TextView android:id="@+id/player_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:fontFamily="sans-seriff-condensed"
+              android:textColor="@color/dark_black"
+              android:textStyle="bold"
+              android:textAppearance="?android:textAppearanceLarge"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+            <TextView android:id="@+id/player_dob"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:fontFamily="sans-seriff-condensed"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+            <TextView android:id="@+id/player_nationality"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+            <TextView android:id="@+id/player_jersey"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:fontFamily="sans-seriff-condensed"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical">
+            <TextView android:id="@+id/player_position"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:fontFamily="sans-seriff-condensed"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+            <TextView android:id="@+id/player_contract"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:fontFamily="sans-seriff-condensed"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+            <TextView android:id="@+id/player_market_value"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:fontFamily="sans-seriff-condensed"
+                      android:textColor="@color/dark_black"
+                      android:textStyle="bold"
+                      android:textAppearance="?android:textAppearanceSmall"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

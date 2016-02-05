@@ -1,0 +1,45 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Soccer</string>
+    <string name="action_refresh">Refresh Leagues</string>
+    <string name="action_refresh_Fixture">Refresh Fixtures</string>
+    <string name="action_refresh_table">Refresh Table</string>
+    <string name="action_league_table">League Table</string>
+    <string name="share_action">Share</string>
+    <string name="current_match">Current Match Day: <xliff:g id="day">%1$s</xliff:g></string>
+    <string name="number_teams">Total Teams: <xliff:g id="teams">%1$s</xliff:g></string>
+    <string name="number_games">Total Games: <xliff:g id="games">%1$s</xliff:g></string>
+    <string name="home"><u>Home</u></string>
+    <string name="away"><u>Away</u></string>
+    <string name="score_string"><xliff:g id="homeGoal">%1$s</xliff:g> - <xliff:g id="awayGoal">%2$S</xliff:g></string>
+    <string name="time_date"><xliff:g id="dayString">%1$s</xliff:g> / <xliff:g id="tame">%2$s</xliff:g> UTC</string>
+    <string name="format_points">Points: <xliff:g id="point">%1$s</xliff:g></string>
+    <string name="format_position">Position: <xliff:g id="position">%1$s</xliff:g></string>
+    <string name="format_matches_played">Matches Played: <xliff:g id="matches">%1$s</xliff:g></string>
+    <string name="home_text"><u>HOME</u></string>
+    <string name="away_text"><u>AWAY</u></string>
+    <string name="team_wins">Wins:<xliff:g id="wins">%1$s</xliff:g></string>
+    <string name="team_losses">Losses: <xliff:g id="losses">%1$s</xliff:g></string>
+    <string name="team_draws">Draws: <xliff:g id="draws">%1$s</xliff:g></string>
+    <string name="team_goals">Goals: <xliff:g id="goals">%1$s</xliff:g></string>
+    <string name="team_goal_difference">Goal Difference: <xliff:g id="goaldifference">%1$s</xliff:g></string>
+    <string name="team_goals_against">Goals Against: <xliff:g id="goalsagainst">%1$s</xliff:g></string>
+    <string name="team_string">Teams</string>
+    <string name="refresh_teams">Refresh Teams</string>
+    <string name="market_value">Squad Market Value: <xliff:g id="valueMarket">%1$s</xliff:g></string>
+    <string name="refresh_player">Refresh Players</string>
+    <string name="format_nationality">Nationality: <xliff:g id="nationality">%1$s</xliff:g></string>
+    <string name="formatposition">Position: <xliff:g id="pos">%1$s</xliff:g></string>
+    <string name="format_jersey">Jersey No.: <xliff:g id="jersey">%1$s</xliff:g></string>
+    <string name="format_contract">Contract Until: <xliff:g id="contract">%1$s</xliff:g></string>
+    <string name="format_market">Market Value: <xliff:g id="market">%1$s</xliff:g></string>
+    <string name="format_dob">Date Of Birth: <xliff:g id="dob">%1$s</xliff:g></string>
+    <string name="account_type">com.hahaha.sandy</string>
+    <string name="content_authority">com.hahaha.sandy.soccer</string>
+    <string name="fixture_id">ca-app-pub-5694148890427879/1679575749</string>
+    <string name="league_id">ca-app-pub-5694148890427879/9202842542</string>
+    <string name="player_id">ca-app-pub-5694148890427879/4633042149</string>
+    <string name="team_id">ca-app-pub-5694148890427879/6109775345</string>
+    <string name="table_id">ca-app-pub-5694148890427879/3156308944</string>
+    <string name="about_text">Thank you for downloading the Euro Soccer.Every team image and league image is the property of their respected owners.I doesn\'t own any part of it. Thank you</string>
+    <string name="about">About</string>
+</resources>

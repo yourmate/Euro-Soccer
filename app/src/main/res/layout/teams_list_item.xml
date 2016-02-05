@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:minHeight="?attr/listPreferredItemHeight"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="5dp">
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="0dp"
+                  android:layout_weight="1">
+        <ImageView android:id="@+id/teams_image"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+        <TextView android:id="@+id/teams_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-seriff-condensed"
+                  android:textColor="@color/dark_black"
+                  android:textStyle="bold"
+                  android:textAppearance="?android:textAppearanceLarge"
+                  android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1">
+        <TextView android:id="@+id/team_market_value"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:fontFamily="sans-seriff-condensed"
+                  android:textStyle="bold"
+                  android:textColor="@color/dark_black"
+                  android:textAppearance="?android:textAppearanceMedium"
+                  android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

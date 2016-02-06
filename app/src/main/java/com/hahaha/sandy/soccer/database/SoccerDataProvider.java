@@ -17,25 +17,38 @@ import java.text.StringCharacterIterator;
 
 
 public class SoccerDataProvider extends ContentProvider {
+    
+    //Helps us to build SQL queries
     public static SQLiteQueryBuilder mSqLiteQueryBuilder;
+
+    //queryBuilder is intialized and table is set
     static {
         mSqLiteQueryBuilder = new SQLiteQueryBuilder();
         mSqLiteQueryBuilder.setTables(SoccerContract.LeagueTableEntry.TABLE_NAME);
     }
+
+    //urimatcher to match uri's with constants
     UriMatcher sUriMatcher = buildUriMatcher();
     SoccerDbHelper soccerDbHelper;
+
+    //constant to match uri
     public static final int TABLE_LEAGUE = 101;
     public static final int TABLE_FIXTURE = 102;
     public static final int TABLE_LEAGUE_POINTS = 103;
     public static final int TABLE_LEAGUE_DETAIL = 104;
     public static final int TABLE_TEAMS = 105;
     public static final int TABLE_PLAYERS = 106;
+    
     @Override
     public boolean onCreate() {
+        
+        //intialized soccerDbHelper
         soccerDbHelper = new SoccerDbHelper(getContext());
         return true;
     }
+    //leagues.teamName = ?
     private static String mSoccerDataWithTeamName = SoccerContract.LeagueTableEntry.TABLE_NAME + "." + SoccerContract.LeagueTableEntry.TEAM_NAME + " = ? ";
+    
     private Cursor getSoccerDatafromName(Uri uri,String[] projection,String sortOrder)
     {
         String name = SoccerContract.LeagueTableEntry.getTeamName(uri);

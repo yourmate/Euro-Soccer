@@ -8,12 +8,16 @@ import android.provider.BaseColumns;
 
 import java.net.URI;
 import java.net.URL;
-
+//Weather Contract is the contract between database and ui of application and it usually contains constants for column name
 public class SoccerContract {
+    
+    //content authorithy needed to access the database
     public static String CONTENT_AUTHORITY = "com.hahaha.sandy.soccer";
-
+    
+    //base content url
     public static Uri BASE_CONTENT_URI = Uri.parse("content://"+CONTENT_AUTHORITY);
 
+    //constant for table names
     public static String PATH_LEAGUES = "leagues";
 
     public static String PATH_FIXTURES = "fixtures";
@@ -21,11 +25,18 @@ public class SoccerContract {
     public static String PATH_LEAGUE_TABLE = "league_table";
     public static String PATH_TEAMS = "teams";
     public static String PATH_PLAYERS = "players";
+
+    //Interface BaseColums allows us to use various methods associated with _ID
     public static final class LeaguesEntry implements BaseColumns
     {
+        //final uri for table leagues
         public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_LEAGUES).build();
+        
+        //content_type to indicate what uri returns,MIME types
         public static final String CONTENT_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_LEAGUES;
         public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_LEAGUES;
+        
+        //Constants for Column Names
         public static final String TABLE_NAME = "leagues";
         public static final String LEAGUE_NAME = "league_name";
         public static final String LEAGUE_MATCH_DAY = "match_day";
@@ -34,6 +45,7 @@ public class SoccerContract {
         public static final String LEAGUE_ID = "league_id";
         public static Uri buildLeagueUriFromId(long _id)
         {
+            //return uri appended with id
             return ContentUris.withAppendedId(CONTENT_URI,_id);
         }
     }
@@ -91,10 +103,12 @@ public class SoccerContract {
         }
         public static Uri buildUriWithTeamName(String name)
         {
+            //builds uri using team name
             return CONTENT_URI.buildUpon().appendPath(name).build();
         }
         public static String getTeamName(Uri uri)
         {
+            //gets team name and returns it
             return uri.getPathSegments().get(1);
         }
     }

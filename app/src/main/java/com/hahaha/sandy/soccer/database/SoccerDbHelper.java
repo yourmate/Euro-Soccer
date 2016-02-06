@@ -6,16 +6,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class SoccerDbHelper extends SQLiteOpenHelper {
+    //constant for Database version and it changes whenever we modify database
     public static final int DATABASE_VERSION = 9;
     public static final String DATABASE_NAME = "soccer.db";
 
-
+    //constructor to intialize database version and database name
     public SoccerDbHelper(Context context) {
         super(context, DATABASE_NAME,null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //Constant String to create table and defining various constraints on them 
         final String CREATE_LEAGUE_TABLE = "CREATE TABLE " + SoccerContract.LeaguesEntry.TABLE_NAME
                 + "( " + SoccerContract.LeaguesEntry._ID + " INTEGER PRIMARY KEY, "
                 + SoccerContract.LeaguesEntry.LEAGUE_ID + " INTEGER NOT NULL, "
@@ -80,6 +82,8 @@ public class SoccerDbHelper extends SQLiteOpenHelper {
                 + SoccerContract.PlayersEntry.PLAYER_CONTRACT_UNTIL + " TEXT NOT NULL, "
                 + SoccerContract.PlayersEntry.PLAYER_MARKET_VALUE + " TEXT NOT NULL, "
                 +"UNIQUE (" + SoccerContract.PlayersEntry._ID +") ON CONFLICT REPLACE);";
+        
+        //this is where the table is created
         db.execSQL(CREATE_LEAGUE_TABLE);
         db.execSQL(CREATE_FIXTURE_TABLE);
         db.execSQL(CREATE_LEAGUE_POINTS_TABLE);
@@ -87,8 +91,10 @@ public class SoccerDbHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_PLAYER_TABLE);
     }
 
+//this method is called only when there is database version change
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        //drops table if it already existed
         db.execSQL("DROP TABLE IF EXISTS " + SoccerContract.LeaguesEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + SoccerContract.FixtureEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + SoccerContract.LeagueTableEntry.TABLE_NAME);
